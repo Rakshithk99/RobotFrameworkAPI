@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-07-30T01:34:48.165260" rpa="false" schemaversion="5">
+<suite id="s1" name="TC01 GET Request" source="C:\Users\rakk0001.SPATIALNETWORX\PycharmProjects\APITesting\TestCases\TC01_GET_Request.robot">
+<test id="s1-t1" name="Get_ThirdParty" line="10">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-07-30T01:34:48.947514" level="INFO">Creating Session using : alias=mysession, url=http://10.246.4.103/spatialSTORM/spatialSUITE/v8_6_2/custom, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-07-30T01:34:48.947514" elapsed="0.015286"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-07-30T01:34:48.962800" level="INFO">${auth} = ['SPATIALNETWORX\rakk0001', 'Rakshi@spatial1']</msg>
+<var>${auth}</var>
+<arg>SPATIALNETWORX\rakk0001</arg>
+<arg>Rakshi@spatial1</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-07-30T01:34:48.962800" elapsed="0.000000"/>
+</kw>
+<kw name="Get Request" owner="RequestsLibrary">
+<msg time="2024-07-30T01:34:48.962800" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2024-07-30T01:34:48.969595" level="FAIL">AttributeError: 'str' object has no attribute 'items'</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/${service}</arg>
+<arg>auth=${auth}</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<status status="FAIL" start="2024-07-30T01:34:48.962800" elapsed="0.006795">AttributeError: 'str' object has no attribute 'items'</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-07-30T01:34:48.969595" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-07-30T01:34:48.969595" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-30T01:34:48.947514" elapsed="0.022081">AttributeError: 'str' object has no attribute 'items'</status>
+</test>
+<status status="FAIL" start="2024-07-30T01:34:48.195072" elapsed="0.774523"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TC01 GET Request">TC01 GET Request</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-07-30T01:34:48.962800" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+</errors>
+</robot>

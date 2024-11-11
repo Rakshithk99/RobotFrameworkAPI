@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-09-03T14:57:04.086479" rpa="false" schemaversion="5">
+<suite id="s1" name="DataDrivenCSV" source="C:\Users\rakk0001.SPATIALNETWORX\PycharmProjects\APITesting\TestCases\DataDrivenCSV.robot">
+<test id="s1-t1" name="Third_Party Report using CG-SH3-264f and 2" line="16">
+<kw name="ReadDataUsingCSV">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-09-03T14:57:04.693444" level="INFO">${auth} = ['SPATIALNETWORX\\rakk0001', 'Rakshi@spatial1']</msg>
+<var>${auth}</var>
+<arg>SPATIALNETWORX\\rakk0001</arg>
+<arg>Rakshi@spatial1</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-09-03T14:57:04.693444" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-09-03T14:57:04.694459" level="INFO">${params} = {'ReportType': 'Third_Party', 'Sheath': 'CG-SH3-264f', 'Segment': '2'}</msg>
+<var>${params}</var>
+<arg>ReportType=${ReportType}</arg>
+<arg>Sheath=${Sheath}</arg>
+<arg>Segment=${Segment}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-09-03T14:57:04.693444" elapsed="0.001015"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-09-03T14:57:04.694459" level="INFO">Creating Session using : alias=mysession, url=http://10.246.4.103/spatialSTORM/spatialSUITE/v8_6_2/custom, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001DE974B5160&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${base_url}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-09-03T14:57:04.694459" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-09-03T14:57:45.390443" level="INFO">GET Request : url=http://10.246.4.103/spatialSTORM/spatialSUITE/v8_6_2/custom/PayloadReport?ReportType=Third_Party&amp;Sheath=CG-SH3-264f&amp;Segment=2 
+ path_url=/spatialSTORM/spatialSUITE/v8_6_2/custom/PayloadReport?ReportType=Third_Party&amp;Sheath=CG-SH3-264f&amp;Segment=2 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Basic U1BBVElBTE5FVFdPUlhccmFrazAwMDE6UmFrc2hpQHNwYXRpYWwx'} 
+ body=None 
+ </msg>
+<msg time="2024-09-03T14:57:45.390443" level="INFO">GET Response : url=http://10.246.4.103/spatialSTORM/spatialSUITE/v8_6_2/custom/PayloadReport?ReportType=Third_Party&amp;Sheath=CG-SH3-264f&amp;Segment=2 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'private', 'Content-Type': 'application/json; charset=utf-8', 'Server': 'Microsoft-IIS/10.0', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'Date': 'Tue, 03 Sep 2024 04:57:45 GMT', 'Content-Length': '41008'} 
+ body={"Summary":[["Date","2024-09-03 14:57:45"],["User","SPATIALNETWORX\\rakk0001"],["Request URL","http://10.246.4.103/spatialSTORM/spatialSUITE/v8_6_2/custom/PayloadReport?ReportType=Third_Party&amp;Sheath=CG-SH3-264f&amp;Segment=2"],["Request Processing time (s)",25.1350405]],"Issues":[],"Data":[{"PAYLOAD":"PIF-11283","SHEATH":"CG-SH3-264f","NOTES":"Gulf Canada Square","FIBRE_SYSTEM":"CG-10:CG-467:fs7","BUFFER":"Blue","FIBRE":"Blue","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-11283","SHEATH":"CG-SH3-264f","NOTES":"Gulf Canada Square","FIBRE_SYSTEM":"CG-10:CG-467:fs7","BUFFER":"Blue","FIBRE":"Orange","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-11298","SHEATH":"CG-SH3-264f","NOTES":"CPR0004CGE","FIBRE_SYSTEM":"CG-10:CG-467:fs3","BUFFER":"Blue","FIBRE":"Green","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-11298","SHEATH":"CG-SH3-264f","NOTES":"CPR0004CGE","FIBRE_SYSTEM":"CG-10:CG-467:fs3","BUFFER":"Blue","FIBRE":"Brown","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10146","SHEATH":"CG-SH3-264f","NOTES":"Royal Park Tower","FIBRE_SYSTEM":"CG-10:CG-497:fs1","BUFFER":"Blue","FIBRE":"Slate","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10146","SHEATH":"CG-SH3-264f","NOTES":"Royal Park Tower","FIBRE_SYSTEM":"CG-10:CG-497:fs1","BUFFER":"Blue","FIBRE":"White","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10021","SHEATH":"CG-SH3-264f","NOTES":"Nova Chem Bldg","FIBRE_SYSTEM":"CG-10:CG-611:fs1","BUFFER":"Blue","FIBRE":"Red","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10021","SHEATH":"CG-SH3-264f","NOTES":"Nova Chem Bldg","FIBRE_SYSTEM":"CG-10:CG-611:fs1","BUFFER":"Blue","FIBRE":"Black","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10868","SHEATH":"CG-SH3-264f","NOTES":"Bankers Hall","FIBRE_SYSTEM":"CG-10:CG-260:fs3","BUFFER":"Blue","FIBRE":"Yellow","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10868","SHEATH":"CG-SH3-264f","NOTES":"Bankers Hall","FIBRE_SYSTEM":"CG-10:CG-260:fs3","BUFFER":"Blue","FIBRE":"Violet","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"81915","SHEATH":"CG-SH3-264f","NOTES":"Bell IDP U06633","FIBRE_SYSTEM":"CG-10:CG-88:fs19","BUFFER":"Blue","FIBRE":"Rose","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"81915","SHEATH":"CG-SH3-264f","NOTES":"Bell IDP U06633","FIBRE_SYSTEM":"CG-10:CG-88:fs19","BUFFER":"Blue","FIBRE":"Aqua","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"1275","SHEATH":"CG-SH3-264f","NOTES":"Western Gas Tower","FIBRE_SYSTEM":"CG-10:CG-749:fs8","BUFFER":"Orange","FIBRE":"Blue","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"1275","SHEATH":"CG-SH3-264f","NOTES":"Western Gas Tower","FIBRE_SYSTEM":"CG-10:CG-749:fs8","BUFFER":"Orange","FIBRE":"Orange","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-11359","SHEATH":"CG-SH3-264f","NOTES":"Manulife House II","FIBRE_SYSTEM":"CG-10:CG-365xx:fs2","BUFFER":"Orange","FIBRE":"Green","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-11359","SHEATH":"CG-SH3-264f","NOTES":"Manulife House II","FIBRE_SYSTEM":"CG-10:CG-365xx:fs2","BUFFER":"Orange","FIBRE":"Brown","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10598","SHEATH":"CG-SH3-264f","NOTES":"Sprint","FIBRE_SYSTEM":"CG-10:CG-88:fs3","BUFFER":"Orange","FIBRE":"Slate","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10598","SHEATH":"CG-SH3-264f","NOTES":"Sprint","FIBRE_SYSTEM":"CG-10:CG-88:fs3","BUFFER":"Orange","FIBRE":"White","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-1490","SHEATH":"CG-SH3-264f","NOTES":"Scotia Centre","FIBRE_SYSTEM":"CG-10:CG-556:fs1","BUFFER":"Orange","FIBRE":"Red","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-1490","SHEATH":"CG-SH3-264f","NOTES":"Scotia Centre","FIBRE_SYSTEM":"CG-10:CG-556:fs1","BUFFER":"Orange","FIBRE":"Black","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":"Group Telecom","FIBRE_SYSTEM":null,"BUFFER":"Orange","FIBRE":"Rose","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":"Group Telecom","FIBRE_SYSTEM":null,"BUFFER":"Orange","FIBRE":"Aqua","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":null,"FIBRE_SYSTEM":null,"BUFFER":"Green","FIBRE":"Blue","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":null,"FIBRE_SYSTEM":null,"BUFFER":"Green","FIBRE":"Orange","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10942","SHEATH":"CG-SH3-264f","NOTES":"Cascade Bldg","FIBRE_SYSTEM":"CG-10:CG-429:fs1","BUFFER":"Green","FIBRE":"Green","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10942","SHEATH":"CG-SH3-264f","NOTES":"Cascade Bldg","FIBRE_SYSTEM":"CG-10:CG-429:fs1","BUFFER":"Green","FIBRE":"Brown","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10182","SHEATH":"CG-SH3-264f","NOTES":"Dorchester Sq","FIBRE_SYSTEM":"CG-10:CG-456:fs1","BUFFER":"Green","FIBRE":"Slate","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":"Dorchester Sq","FIBRE_SYSTEM":null,"BUFFER":"Green","FIBRE":"White","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10501","SHEATH":"CG-SH3-264f","NOTES":"1st West Profsl Bldg","FIBRE_SYSTEM":"CG-10:CG-710:fs1","BUFFER":"Green","FIBRE":"Red","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10501","SHEATH":"CG-SH3-264f","NOTES":"1st West Profsl Bldg","FIBRE_SYSTEM":"CG-10:CG-710:fs1","BUFFER":"Green","FIBRE":"Black","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":null,"FIBRE_SYSTEM":null,"BUFFER":"Green","FIBRE":"Yellow","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":null,"FIBRE_SYSTEM":null,"BUFFER":"Green","FIBRE":"Violet","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":null,"FIBRE_SYSTEM":null,"BUFFER":"Green","FIBRE":"Rose","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":null,"FIBRE_SYSTEM":null,"BUFFER":"Green","FIBRE":"Aqua","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-11111","SHEATH":"CG-SH3-264f","NOTES":"Smart Technologies","FIBRE_SYSTEM":"CG-10:CG-1058:fs1","BUFFER":"Brown","FIBRE":"Blue","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-11111","SHEATH":"CG-SH3-264f","NOTES":"Smart Technologies","FIBRE_SYSTEM":"CG-10:CG-1058:fs1","BUFFER":"Brown","FIBRE":"Orange","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10567","SHEATH":"CG-SH3-264f","NOTES":"Palliser Sq 1","FIBRE_SYSTEM":"CG-10:CG-721:fs1","BUFFER":"Brown","FIBRE":"Green","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10567","SHEATH":"CG-SH3-264f","NOTES":"Palliser Sq 1","FIBRE_SYSTEM":"CG-10:CG-721:fs1","BUFFER":"Brown","FIBRE":"Brown","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":null,"FIBRE_SYSTEM":null,"BUFFER":"Brown","FIBRE":"Slate","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":null,"FIBRE_SYSTEM":null,"BUFFER":"Brown","FIBRE":"White","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10391","SHEATH":"CG-SH3-264f","NOTES":"Sutton Hall Bldg","FIBRE_SYSTEM":"CG-10:CG-767:fs1","BUFFER":"Brown","FIBRE":"Red","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10391","SHEATH":"CG-SH3-264f","NOTES":"Sutton Hall Bldg","FIBRE_SYSTEM":"CG-10:CG-767:fs1","BUFFER":"Brown","FIBRE":"Black","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10322","SHEATH":"CG-SH3-264f","NOTES":"Bankers Hall","FIBRE_SYSTEM":"CG-10:CG-260:fs4","BUFFER":"Brown","FIBRE":"Yellow","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10322","SHEATH":"CG-SH3-264f","NOTES":"Bankers Hall","FIBRE_SYSTEM":"CG-10:CG-260:fs4","BUFFER":"Brown","FIBRE":"Violet","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"81915","SHEATH":"CG-SH3-264f","NOTES":"Bell IDP U06633","FIBRE_SYSTEM":"CG-10:CG-88:fs19","BUFFER":"Brown","FIBRE":"Rose","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"81915","SHEATH":"CG-SH3-264f","NOTES":"Bell IDP U06633","FIBRE_SYSTEM":"CG-10:CG-88:fs19","BUFFER":"Brown","FIBRE":"Aqua","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":"OC1 Ring","FIBRE_SYSTEM":null,"BUFFER":"Slate","FIBRE":"Blue","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":"OC1 Ring","FIBRE_SYSTEM":null,"BUFFER":"Slate","FIBRE":"Orange","END":"CG-10-1-1","START":"CG-1739-1-4","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH3-264f","NOTES":null,"FIBRE_SYSTEM":null,"BUFFER":"Slate","... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2024-09-03T14:57:45.390443" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/${service}</arg>
+<arg>params=${params}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-09-03T14:57:04.694459" elapsed="40.696966"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-03T14:57:45.391425" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-03T14:57:45.392457" elapsed="0.079003"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-03T14:57:45.475476" level="INFO">${source data} = {'Summary': [['Date', '2024-09-03 14:57:45'], ['User', 'SPATIALNETWORX\rakk0001'], ['Request URL', 'http://10.246.4.103/spatialSTORM/spatialSUITE/v8_6_2/custom/PayloadReport?ReportType=Third_Party&amp;She...</msg>
+<var>${source data}</var>
+<arg>json.loads("""${response.content}""")</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-03T14:57:45.472485" elapsed="0.002991"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-03T14:57:45.477467" level="INFO">${data} = [{'PAYLOAD': 'PIF-11283', 'SHEATH': 'CG-SH3-264f', 'NOTES': 'Gulf Canada Square', 'FIBRE_SYSTEM': 'CG-10:CG-467:fs7', 'BUFFER': 'Blue', 'FIBRE': 'Blue', 'END': 'CG-10-1-1', 'START': 'CG-1739-1-4', 'FI...</msg>
+<var>${data}</var>
+<arg>${source data["Data"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-03T14:57:45.475476" elapsed="0.001991"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-09-03T14:57:45.477467" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\rakk0001.SPATIALNETWORX\PycharmProjects\APITesting\ExpectedResponses\Expected1.txt"&gt;C:\Users\rakk0001.SPATIALNETWORX\PycharmProjects\APITesting\ExpectedResponses\Expected1.txt&lt;/a&gt;'.</msg>
+<msg time="2024-09-03T14:57:45.479459" level="INFO">${expectedResponse} = [{'PAYLOAD': 'PIF-11283', 'SHEATH': 'CG-SH3-264f', 'NOTES': 'Gulf Canada Square', 'FIBRE_SYSTEM': 'CG-10:CG-467:fs7', 'BUFFER': 'Blue', 'FIBRE': 'Blue', 'END': 'CG-10-1-1', 'START': 'CG-1739-1-4', 'FI...</msg>
+<var>${expectedResponse}</var>
+<arg>${ExpectedResponse}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-09-03T14:57:45.477467" elapsed="0.001992"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-09-03T14:57:45.479459" level="INFO">Argument types are:
+&lt;class 'list'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${data}</arg>
+<arg>${expectedResponse}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-09-03T14:57:45.479459" elapsed="0.001018"/>
+</kw>
+<arg>ReportType=Third_Party</arg>
+<arg>Sheath=CG-SH3-264f</arg>
+<arg>Segment=2</arg>
+<arg>ExpectedResponse=./ExpectedResponses/Expected1.txt</arg>
+<status status="PASS" start="2024-09-03T14:57:04.692461" elapsed="40.788016"/>
+</kw>
+<status status="PASS" start="2024-09-03T14:57:04.691440" elapsed="40.789037"/>
+</test>
+<test id="s1-t2" name="Third_Party Report using CG-SH185-48f and 2" line="16">
+<kw name="ReadDataUsingCSV">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-09-03T14:57:45.483461" level="INFO">${auth} = ['SPATIALNETWORX\\rakk0001', 'Rakshi@spatial1']</msg>
+<var>${auth}</var>
+<arg>SPATIALNETWORX\\rakk0001</arg>
+<arg>Rakshi@spatial1</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-09-03T14:57:45.483461" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-09-03T14:57:45.483461" level="INFO">${params} = {'ReportType': 'Third_Party', 'Sheath': 'CG-SH185-48f', 'Segment': '2'}</msg>
+<var>${params}</var>
+<arg>ReportType=${ReportType}</arg>
+<arg>Sheath=${Sheath}</arg>
+<arg>Segment=${Segment}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-09-03T14:57:45.483461" elapsed="0.000993"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-09-03T14:57:45.484454" level="INFO">Creating Session using : alias=mysession, url=http://10.246.4.103/spatialSTORM/spatialSUITE/v8_6_2/custom, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001DE974F8E60&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${base_url}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-09-03T14:57:45.484454" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-09-03T14:57:51.234790" level="INFO">GET Request : url=http://10.246.4.103/spatialSTORM/spatialSUITE/v8_6_2/custom/PayloadReport?ReportType=Third_Party&amp;Sheath=CG-SH185-48f&amp;Segment=2 
+ path_url=/spatialSTORM/spatialSUITE/v8_6_2/custom/PayloadReport?ReportType=Third_Party&amp;Sheath=CG-SH185-48f&amp;Segment=2 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Basic U1BBVElBTE5FVFdPUlhccmFrazAwMDE6UmFrc2hpQHNwYXRpYWwx'} 
+ body=None 
+ </msg>
+<msg time="2024-09-03T14:57:51.234790" level="INFO">GET Response : url=http://10.246.4.103/spatialSTORM/spatialSUITE/v8_6_2/custom/PayloadReport?ReportType=Third_Party&amp;Sheath=CG-SH185-48f&amp;Segment=2 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'private', 'Content-Type': 'application/json; charset=utf-8', 'Server': 'Microsoft-IIS/10.0', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'Date': 'Tue, 03 Sep 2024 04:57:51 GMT', 'Content-Length': '4410'} 
+ body={"Summary":[["Date","2024-09-03 14:57:51"],["User","SPATIALNETWORX\\rakk0001"],["Request URL","http://10.246.4.103/spatialSTORM/spatialSUITE/v8_6_2/custom/PayloadReport?ReportType=Third_Party&amp;Sheath=CG-SH185-48f&amp;Segment=2"],["Request Processing time (s)",5.7290163]],"Issues":[],"Data":[{"PAYLOAD":"PIF-10938","SHEATH":"CG-SH185-48f","NOTES":"AT&amp;T CO","FIBRE_SYSTEM":"CG-10:EN-766:fs5","BUFFER":"Blue","FIBRE":"Green","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10938","SHEATH":"CG-SH185-48f","NOTES":"AT&amp;T CO","FIBRE_SYSTEM":"CG-10:EN-766:fs5","BUFFER":"Blue","FIBRE":"Brown","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-11210","SHEATH":"CG-SH185-48f","NOTES":"UofC to Bell Nexxia","FIBRE_SYSTEM":"CG-208:CG-818:fs1","BUFFER":"Blue","FIBRE":"Slate","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-11210","SHEATH":"CG-SH185-48f","NOTES":"UofC to Bell Nexxia","FIBRE_SYSTEM":"CG-208:CG-818:fs1","BUFFER":"Blue","FIBRE":"White","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10495","SHEATH":"CG-SH185-48f","NOTES":"ATM Backbone","FIBRE_SYSTEM":"CG-1:CG-10:fs2","BUFFER":"Orange","FIBRE":"Slate","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10495","SHEATH":"CG-SH185-48f","NOTES":"ATM Backbone","FIBRE_SYSTEM":"CG-1:CG-10:fs2","BUFFER":"Orange","FIBRE":"White","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"2301","SHEATH":"CG-SH185-48f","NOTES":"West SHE-Dntn (GT)","FIBRE_SYSTEM":"CG-1:CG-10:fs34","BUFFER":"Orange","FIBRE":"Red","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"2301","SHEATH":"CG-SH185-48f","NOTES":"West SHE-Dntn (GT)","FIBRE_SYSTEM":"CG-1:CG-10:fs34","BUFFER":"Orange","FIBRE":"Black","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"CCDT-124-L1000,PIF-10014","SHEATH":"CG-SH185-48f","NOTES":"CG1:10 Sonet Ring","FIBRE_SYSTEM":"CG-1:CG-10:fs4","BUFFER":"Green","FIBRE":"Blue","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"CCDT-124-L1000,PIF-10014","SHEATH":"CG-SH185-48f","NOTES":"CG1:10 Sonet Ring","FIBRE_SYSTEM":"CG-1:CG-10:fs4","BUFFER":"Green","FIBRE":"Orange","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10161","SHEATH":"CG-SH185-48f","NOTES":"Wellington Bldg","FIBRE_SYSTEM":"CG-10:CG-672:fs2","BUFFER":"Green","FIBRE":"Yellow","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10161","SHEATH":"CG-SH185-48f","NOTES":"Wellington Bldg","FIBRE_SYSTEM":"CG-10:CG-672:fs2","BUFFER":"Green","FIBRE":"Violet","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"2841","SHEATH":"CG-SH185-48f","NOTES":"U of C (GT)","FIBRE_SYSTEM":"CG-10:CG-208:fs4","BUFFER":"Green","FIBRE":"Rose","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"2841","SHEATH":"CG-SH185-48f","NOTES":"U of C (GT)","FIBRE_SYSTEM":"CG-10:CG-208:fs4","BUFFER":"Green","FIBRE":"Aqua","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH185-48f","NOTES":null,"FIBRE_SYSTEM":null,"BUFFER":"Brown","FIBRE":"Green","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH185-48f","NOTES":null,"FIBRE_SYSTEM":null,"BUFFER":"Brown","FIBRE":"Brown","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10195","SHEATH":"CG-SH185-48f","NOTES":"Sonet","FIBRE_SYSTEM":"CG-2:CG-10:fs2","BUFFER":"Brown","FIBRE":"Red","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":"PIF-10195","SHEATH":"CG-SH185-48f","NOTES":"Sonet","FIBRE_SYSTEM":"CG-2:CG-10:fs2","BUFFER":"Brown","FIBRE":"Black","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH185-48f","NOTES":"*BW-B2606A-1,CG-1:CG-10 Empty","FIBRE_SYSTEM":null,"BUFFER":"Brown","FIBRE":"Yellow","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"},{"PAYLOAD":null,"SHEATH":"CG-SH185-48f","NOTES":"*BW-B2606A-2,CG-1:CG-10 Empty","FIBRE_SYSTEM":null,"BUFFER":"Brown","FIBRE":"Violet","END":"CG-10-1-1","START":"CG-10386-1-1","FIBRE_OWNER":"Group Telecom"}]} 
+ </msg>
+<msg time="2024-09-03T14:57:51.234790" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/${service}</arg>
+<arg>params=${params}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-09-03T14:57:45.484454" elapsed="5.750336"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-03T14:57:51.234790" elapsed="0.000996"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-03T14:57:51.235786" elapsed="0.001044"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-03T14:57:51.238840" level="INFO">${source data} = {'Summary': [['Date', '2024-09-03 14:57:51'], ['User', 'SPATIALNETWORX\rakk0001'], ['Request URL', 'http://10.246.4.103/spatialSTORM/spatialSUITE/v8_6_2/custom/PayloadReport?ReportType=Third_Party&amp;She...</msg>
+<var>${source data}</var>
+<arg>json.loads("""${response.content}""")</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-03T14:57:51.237831" elapsed="0.001009"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-03T14:57:51.239839" level="INFO">${data} = [{'PAYLOAD': 'PIF-10938', 'SHEATH': 'CG-SH185-48f', 'NOTES': 'AT&amp;T CO', 'FIBRE_SYSTEM': 'CG-10:EN-766:fs5', 'BUFFER': 'Blue', 'FIBRE': 'Green', 'END': 'CG-10-1-1', 'START': 'CG-10386-1-1', 'FIBRE_OWNE...</msg>
+<var>${data}</var>
+<arg>${source data["Data"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-03T14:57:51.238840" elapsed="0.000999"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-09-03T14:57:51.240848" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\rakk0001.SPATIALNETWORX\PycharmProjects\APITesting\ExpectedResponses\Expected2.txt"&gt;C:\Users\rakk0001.SPATIALNETWORX\PycharmProjects\APITesting\ExpectedResponses\Expected2.txt&lt;/a&gt;'.</msg>
+<msg time="2024-09-03T14:57:51.241806" level="INFO">${expectedResponse} = [{'PAYLOAD': 'PIF-10938', 'SHEATH': 'CG-SH185-48f', 'NOTES': 'AT&amp;T CO', 'FIBRE_SYSTEM': 'CG-10:EN-766:fs5', 'BUFFER': 'Blue', 'FIBRE': 'Green', 'END': 'CG-10-1-1', 'START': 'CG-10386-1-1', 'FIBRE_OWNE...</msg>
+<var>${expectedResponse}</var>
+<arg>${ExpectedResponse}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-09-03T14:57:51.239839" elapsed="0.001967"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-09-03T14:57:51.241806" level="INFO">Argument types are:
+&lt;class 'list'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${data}</arg>
+<arg>${expectedResponse}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-09-03T14:57:51.241806" elapsed="0.001030"/>
+</kw>
+<arg>ReportType=Third_Party</arg>
+<arg>Sheath=CG-SH185-48f</arg>
+<arg>Segment=2</arg>
+<arg>ExpectedResponse=./ExpectedResponses/Expected2.txt</arg>
+<status status="PASS" start="2024-09-03T14:57:45.483461" elapsed="5.759375"/>
+</kw>
+<status status="PASS" start="2024-09-03T14:57:45.481467" elapsed="5.761369"/>
+</test>
+<status status="PASS" start="2024-09-03T14:57:04.088461" elapsed="47.155385"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="DataDrivenCSV">DataDrivenCSV</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
